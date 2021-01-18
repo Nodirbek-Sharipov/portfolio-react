@@ -1,3 +1,8 @@
+
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute(window.self.__WB_MANIFEST);
+
 const cacheName = 'assets'
 const cachedStuff = [
 
@@ -35,29 +40,29 @@ const cachedStuff = [
     '/offline.html',
 ]
 
-self.addEventListener('install', function(event) {
+window.self.addEventListener('install', function(event) {
   event.waitUntil(caches.open(cacheName).then(function(cache) {
       return cache.addAll(cachedStuff)
     })
   )
 })
 
-self.addEventListener('activate', (event) => {
+window.self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     // Enable navigation preload if it's supported.
     // See https://developers.google.com/web/updates/2017/02/navigation-preload
-    if ('navigationPreload' in self.registration) {
-      await self.registration.navigationPreload.enable();
+    if ('navigationPreload' in window.self.registration) {
+      await window.self.registration.navigationPreload.enable();
     }
   })());
 
   // Tell the active service worker to take control of the page immediately.
-  self.clients.claim();
+  window.self.clients.claim();
 });
 
 // If a request doesn't match anything in the cache, get it from the network,
 // send it to the page and add it to the cache at the same time
-self.addEventListener('fetch', (event) => {
+window.self.addEventListener('fetch', (event) => {
 
     if (event.request.mode === 'navigate') {
         event.respondWith((async () => {

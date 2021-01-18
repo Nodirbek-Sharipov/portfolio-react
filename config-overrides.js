@@ -4,7 +4,14 @@ module.exports = function override(config, env) {
         if(plugin.constructor.name === 'GenerateSW') {
             return new WorkboxWebpackPlugin.InjectManifest({
                 swSrc: './src/sw.js',
-                swDest: 'service-worker.js'
+                swDest: 'service-worker.js',
+                exclude: [
+                    /\.map$/,
+                    /manifest$/,
+                    /\.htaccess$/,
+                    /service-worker\.js$/,
+                    /sw\.js$/,
+                ],
             })
         }
         return plugin
