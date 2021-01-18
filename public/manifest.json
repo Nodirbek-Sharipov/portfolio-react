@@ -3,49 +3,88 @@
 	"name": "Nodirbek Sharipov - Software Engineer",
 	"icons": [
 		{
-			"src": "/icons/android-icon-36x36.png",
+			"src": "/icons/36x36.png",
 			"sizes": "36x36",
 			"type": "image/png",
-			"density": "0.75"
+			"density": "0.75",
+			"purpose": "maskable"
 		},
 		{
-			"src": "/icons/android-icon-48x48.png",
+			"src": "/icons/48x48.png",
 			"sizes": "48x48",
 			"type": "image/png",
-			"density": "1.0"
+			"density": "1.0",
+			"purpose": "maskable"
 		},
 		{
-			"src": "/icons/android-icon-72x72.png",
+			"src": "/icons/72x72.png",
 			"sizes": "72x72",
 			"type": "image/png",
-			"density": "1.5"
+			"density": "1.5",
+			"purpose": "maskable"
 		},
 		{
-			"src": "/icons/android-icon-96x96.png",
+			"src": "/icons/96x96.png",
 			"sizes": "96x96",
 			"type": "image/png",
-			"density": "2.0"
+			"density": "2.0",
+			"purpose": "maskable"
 		},
 		{
-			"src": "/icons/android-icon-144x144.png",
+			"src": "/icons/144x144.png",
 			"sizes": "144x144",
 			"type": "image/png",
-			"density": "3.0"
+			"density": "3.0",
+			"purpose": "any"
+
 		},
 		{
-			"src": "/icons/android-icon-192x192.png",
+			"src": "/icons/192x192.png",
 			"sizes": "192x192",
 			"type": "image/png",
-			"density": "4.0"
+			"density": "4.0",
+			"purpose": "maskable"
 		},
 		{
-			"src": "/icons/favicon.png",
+			"src": "/icons/250x250.png",
 			"sizes": "250x250",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "maskable"
 		}
 	 ],
 	"start_url": ".",
 	"display": "standalone",
 	"theme_color": "#000000",
-	"background_color": "#ffffff"
+	"background_color": "#ffffff",
+	"scope": "/",
+	"shortcuts": [
+		{
+			"name": "Nodirbek Sharipov",
+			"short_name": "Home",
+			"description": "Software Engineer, System Architect",
+			"url": "/",
+			"icons": [{ "src": "/icons/images/home.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "Reach me out",
+			"short_name": "Contacts",
+			"description": "Contact me on business deals or just say hi",
+			"url": "/contacts",
+			"icons": [{ "src": "/icons/images/contacts.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "My showroom",
+			"short_name": "Projects",
+			"description": "Some of my previous projects",
+			"url": "/projects",
+			"icons": [{ "src": "/icons/images/projects.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "I can do these",
+			"short_name": "Skills",
+			"description": "Things I am professional at",
+			"url": "/skills",
+			"icons": [{ "src": "/icons/images/skills.png", "sizes": "192x192" }]
+		}
+	]
 }

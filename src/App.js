@@ -4,7 +4,6 @@ import React, {
 import { NavLink, Route } from "react-router-dom";
 
 import './App.css'
-import fg from './assets/images/fg.png'
 
 import HomePage from './components/HomePage'
 import ContactsPage from './components/ContactsPage'
@@ -13,6 +12,7 @@ import SkillsPage from './components/SkillsPage'
 
 function App() {
 
+	const fg = '/icons/images/fg_1.png'
 
 	useEffect(()=>{
 
