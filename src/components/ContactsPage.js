@@ -11,33 +11,33 @@ import ContactItem from './ContactItem'
 const contacts = [
 	{
 		icon	: mail,
-		url		: 'mailto:mail@nodir.dev',
+		url	: 'mailto:mail@nodir.dev',
 		text	: 'mail@nodir.dev',
 	},
 	{
 		icon	: phone,
-		url		: 'tel:+998905572240',
+		url	: 'tel:+998905572240',
 		text	: '+998(90)-557-2240',
 	},
 	{
 		icon	: github,
-		url		: 'https://github.com/nodirbek-sharipov',
+		url	: 'https://github.com/nodirbek-sharipov',
 		text	: '@nodirbek-sharipov',
 	},
 	{
 		icon	: twitter,
-		url		: 'https://twitter.com/nodirbek_rare',
-		text	: '@nodirbek_rare',
+		url	: 'https://twitter.com/nodir_dev',
+		text	: '@nodir_dev',
 	},
 	{
 		icon	: instagram,
-		url		: 'https://www.instagram.com/sharipov_nodirbek',
+		url	: 'https://www.instagram.com/sharipov_nodirbek',
 		text	: '@sharipov_nodirbek',
 	},
 	{
 		icon	: telegram,
-		url		: 'https://t.me/wiuterian_n',
-		text	: '@wiuterian_n',
+		url	: 'https://t.me/nodirbek_sharipov',
+		text	: '@nodirbek_sharipov',
 	},
 ]
 
