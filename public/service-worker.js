@@ -37,23 +37,23 @@ const cachedStuff = [
 
 self.addEventListener('install', function(event) {
   event.waitUntil(caches.open(cacheName).then(function(cache) {
-      return cache.addAll(cachedStuff.map(item => item))
+      return cache.addAll(cachedStuff)
     })
   )
 })
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    // Enable navigation preload if it's supported.
-    // See https://developers.google.com/web/updates/2017/02/navigation-preload
-    if ('navigationPreload' in self.registration) {
-      await self.registration.navigationPreload.enable();
-    }
-  })());
-
-  // Tell the active service worker to take control of the page immediately.
-  self.clients.claim();
-});
+// self.addEventListener('activate', (event) => {
+//   event.waitUntil((async () => {
+//     // Enable navigation preload if it's supported.
+//     // See https://developers.google.com/web/updates/2017/02/navigation-preload
+//     if ('navigationPreload' in self.registration) {
+//       await self.registration.navigationPreload.enable();
+//     }
+//   })());
+//
+//   // Tell the active service worker to take control of the page immediately.
+//   self.clients.claim();
+// });
 
 // If a request doesn't match anything in the cache, get it from the network,
 // send it to the page and add it to the cache at the same time
