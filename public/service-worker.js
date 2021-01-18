@@ -9,7 +9,7 @@ const cachedStuff = [
     '/icons/192x192.png',
     '/icons/250x250.png',
 
-    '/icons/images/bg_1.png',
+    '/icons/images/bg_1.jpg',
     '/icons/images/fg_1.png',
 
     '/icons/svgs/mail.svg',
@@ -37,7 +37,7 @@ const cachedStuff = [
 
 self.addEventListener('install', function(event) {
   event.waitUntil(caches.open(cacheName).then(function(cache) {
-      return cache.addAll(cachedStuff)
+      return cache.addAll(cachedStuff.map(item => 'https://nodir.dev' + item))
     })
   )
 })
