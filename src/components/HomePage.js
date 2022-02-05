@@ -6,7 +6,7 @@ const HomePage = ()=>{
 
 	return (
 		<p className="main__description">
-			I'm a {ages}y.o. software engineer from Uzbekistan, specialized in scalability, security, UI/UX design and full-stack development.
+			I'm a {ages}y.o. software engineer from Uzbekistan, specialized in scalability, security, immersive user experiences and full-stack development.
 		</p>
 	)
 }
