@@ -1,7 +1,7 @@
 import React, {
 	useEffect,
 } from 'react'
-import { NavLink, Route } from "react-router-dom";
+import { NavLink, Route, withRouter } from "react-router-dom";
 
 import './App.css'
 
@@ -10,9 +10,22 @@ import ContactsPage from './components/ContactsPage'
 import ProjectsPage from './components/ProjectsPage'
 import SkillsPage from './components/SkillsPage'
 
-function App() {
+const App = ({ history }) => {
 
 	const fg = '/icons/images/fg_1.png'
+
+	const [int, setInt] = React.useState(0)
+
+	useEffect(() => {
+		const unlisten = history.listen((location, action) => {
+			console.log(action, location.pathname, location.state)
+			setInt(int+1)
+		})
+
+		return unlisten;
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	})
 
 	useEffect(()=>{
 
@@ -237,7 +250,19 @@ function App() {
 		<div className="site js-site">
 			<div className="container js-container">
 				<header className="header js-animin">
-					<h1 className="header__heading"> <span className="header__name">Nodirbek Sharipov</span> <span className="header__title">Software engineer</span> </h1> </header>
+					<h1 className="header__heading">
+						<span className="header__name">
+							Nodirbek Sharipov
+							<span className="header__title"> - Software engineer</span>
+						</span>
+						<span className="header__title">
+							<a
+								className="link js-link"
+								href='/Nodirbek_Sharipov_Resume.pdf'
+								download>Download Résumé</a>
+						</span>
+					</h1>
+				</header>
 				<div className="bottom">
 					<main className="main js-animin">
 						<Route
@@ -321,4 +346,4 @@ function App() {
 	)
 }
 
-export default App
+export default withRouter(App)

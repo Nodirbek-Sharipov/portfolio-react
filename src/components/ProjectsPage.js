@@ -1,7 +1,25 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
 
-const projects = [
+const current_projects = [
+	{
+		title	: 'Rize - iOS',
+		url		: 'https://apps.apple.com/us/app/rize-see-what-sparks/id1550967095',
+		date	: new Date(),
+	},
+	{
+		title	: 'Rize - android',
+		url		: 'https://play.google.com/store/apps/details?id=com.joinrize.rize',
+		date	: new Date(),
+	},
+	{
+		title	: 'Rize - web',
+		url		: 'https://www.joinrize.com/',
+		date	: new Date(),
+	},
+]
+
+const old_projects = [
 	{
 		title	: 'COVID-19',
 		url		: 'https://uzcovid.netlify.app',
@@ -37,19 +55,33 @@ const projects = [
 		url		: 'https://lotin-krill.netlify.app',
 		date	: new Date(),
 	},
-	{
-		title	: 'Play Store Account',
-		url		: 'https://play.google.com/store/apps/developer?id=Nodirbek+Sharipov',
-		date	: new Date(),
-	},
 ]
 
 const ProjectsPage = ()=>{
 
+	const [current, setCurrent] = React.useState(true)
+
 	return (
-		<ul className="bullet">
-			{projects.map((x, i) => <ProjectItem key={i} project={x}/> )}
-		</ul>
+		<div>
+			<ul className="bullet">
+				{current && current_projects.map((x, i) => <ProjectItem key={i} project={x}/> )}
+				{!current && old_projects.map((x, i) => <ProjectItem key={i} project={x}/> )}
+			</ul>
+			<div style={{ marginTop: '1rem' }}>
+				<a
+					href='#!'
+					className={`link js-link ${current && 'activeLink'}`}
+					onClick={()=>setCurrent(true)}
+				>Current</a>
+
+				<a
+					style={{ marginLeft: '1rem' }}
+					href='#!'
+					className={`link js-link ${!current && 'activeLink'}`}
+					onClick={()=>setCurrent(false)}
+				>Old</a>
+			</div>
+		</div>
 	)
 }
 
