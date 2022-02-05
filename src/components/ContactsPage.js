@@ -5,8 +5,8 @@ import ContactItem from './ContactItem'
 const contacts = [
 	{
 		icon : '/icons/svgs/mail.svg',
-		url : 'mailto:mail@nodir.dev',
-		text : 'mail@nodir.dev',
+		url : 'mailto:sharipovn4@gmail.com',
+		text : 'sharipovn4@gmail.com',
 	},
 	{
 		icon : '/icons/svgs/phone.svg',
