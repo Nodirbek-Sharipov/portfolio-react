@@ -17,6 +17,11 @@ const current_projects = [
 		url		: 'https://www.joinrize.com/',
 		date	: new Date(),
 	},
+	{
+		title	: 'sdb.uz',
+		url		: 'https://sdb.uz/',
+		date	: new Date(),
+	},
 ]
 
 const old_projects = [
