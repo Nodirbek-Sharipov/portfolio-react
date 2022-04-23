@@ -256,10 +256,19 @@ const App = ({ history }) => {
 							<span className="header__title"> - Software engineer</span>
 						</span>
 						<span className="header__title">
+							Résumé:&nbsp;
 							<a
+								target='_blank'
 								className="link js-link"
 								href='/Nodirbek_Sharipov_Resume.pdf'
-								download>Download Résumé</a>
+								download
+							>🔗 Brief</a>
+							&nbsp;
+							<a
+								target='_blank'
+								className="link js-link"
+								href='https://matching.turing.com/developer-resume-preview/b5d9a657ebfcfec7f0b43f276d884b38b45dd851520515'
+							>🔗 Full</a>
 						</span>
 					</h1>
 				</header>
