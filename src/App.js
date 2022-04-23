@@ -259,16 +259,18 @@ const App = ({ history }) => {
 							Résumé:&nbsp;
 							<a
 								target='_blank'
+								rel="noopener noreferrer"
 								className="link js-link"
 								href='/Nodirbek_Sharipov_Resume.pdf'
 								download
-							>🔗 Brief</a>
+							>• Brief</a>
 							&nbsp;
 							<a
 								target='_blank'
+								rel="noopener noreferrer"
 								className="link js-link"
 								href='https://matching.turing.com/developer-resume-preview/b5d9a657ebfcfec7f0b43f276d884b38b45dd851520515'
-							>🔗 Full</a>
+							>• Full</a>
 						</span>
 					</h1>
 				</header>
