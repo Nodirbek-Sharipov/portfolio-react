@@ -9,6 +9,11 @@ const contacts = [
 		text : 'sharipovn4@gmail.com',
 	},
 	{
+		icon : '/icons/svgs/linkedin.svg',
+		url	: 'https://www.linkedin.com/in/nodirdev/',
+		text : 'nodirdev',
+	},
+	{
 		icon : '/icons/svgs/phone.svg',
 		url	: 'tel:+998905572240',
 		text : '+998(90)-557-2240',
@@ -23,11 +28,11 @@ const contacts = [
 		url	: 'https://twitter.com/nodir_dev',
 		text : '@nodir_dev',
 	},
-	{
-		icon : '/icons/svgs/instagram.svg',
-		url	: 'https://www.instagram.com/sharipov_nodirbek',
-		text : '@sharipov_nodirbek',
-	},
+	// {
+	// 	icon : '/icons/svgs/instagram.svg',
+	// 	url	: 'https://www.instagram.com/sharipov_nodirbek',
+	// 	text : '@sharipov_nodirbek',
+	// },
 	{
 		icon : '/icons/svgs/telegram.svg',
 		url	: 'https://t.me/nodirbek_sharipov',
